@@ -68,7 +68,7 @@ extern int serial1_printf(const char *__restrict __format, ...);
 
 #define CFG_TUD_CDC 1
 #define CFG_TUD_MSC 1
-#define CFG_TUD_HID 1
+#define CFG_TUD_HID 2
 #define CFG_TUD_MIDI 1
 #define CFG_TUD_VENDOR 1
 
@@ -104,7 +104,7 @@ extern int serial1_printf(const char *__restrict __format, ...);
 #define CFG_TUH_DEVICE_MAX (CFG_TUH_HUB ? 4 : 1) // hub typically has 4 ports
 
 // Enable tuh_edpt_xfer() API
-//#define CFG_TUH_API_EDPT_XFER       1
+// #define CFG_TUH_API_EDPT_XFER       1
 
 // Number of mass storage
 #define CFG_TUH_MSC 1

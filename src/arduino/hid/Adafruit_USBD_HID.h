@@ -95,6 +95,8 @@ private:
   get_report_callback_t _get_report_cb;
   set_report_callback_t _set_report_cb;
 
+  uint8_t _instance;
+
   friend uint16_t tud_hid_get_report_cb(uint8_t itf, uint8_t report_id,
                                         hid_report_type_t report_type,
                                         uint8_t *buffer, uint16_t reqlen);
