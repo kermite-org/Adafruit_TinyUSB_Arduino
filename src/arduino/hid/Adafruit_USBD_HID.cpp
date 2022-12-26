@@ -36,9 +36,9 @@ uint8_t const _ascii2keycode[128][2] = {HID_ASCII_TO_KEYCODE};
 // TODO multiple instances
 // static Adafruit_USBD_HID *_hid_dev = NULL;
 
-// support 2 instances
+// support multiple instances
 static uint8_t _instance_count = 0;
-static Adafruit_USBD_HID *_hid_devs[2] = {NULL, NULL};
+static Adafruit_USBD_HID *_hid_devs[CFG_TUD_HID];
 
 #ifdef ARDUINO_ARCH_ESP32
 static uint16_t hid_load_descriptor(uint8_t *dst, uint8_t *itf) {
