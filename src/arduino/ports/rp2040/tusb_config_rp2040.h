@@ -68,7 +68,11 @@ extern int serial1_printf(const char *__restrict __format, ...);
 
 #define CFG_TUD_CDC 1
 #define CFG_TUD_MSC 1
-#define CFG_TUD_HID 2
+
+#ifndef CFG_TUD_HID
+#define CFG_TUD_HID 1
+#endif
+
 #define CFG_TUD_MIDI 1
 #define CFG_TUD_VENDOR 1
 
